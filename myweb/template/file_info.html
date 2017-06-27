@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>文件列表</title>
+</head>
+<body>
+	<div style="text-align: center;">
+	<h2>目录下文件列表</h2>
+	<h4>点击下载文件</h4>
+	{% for file in files %}
+		<p><div><li><a href="/download/{{ file }}">{{ file }}</a></li></div></p>
+	{% endfor %}
+	</div>
+</body>
+</html>

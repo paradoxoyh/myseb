@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta charset="utf-8">
+	<title>{{ year }}年高分电影</title>
+</head>
+<body>
+<h2>{{ year }}年高分电影--共{{ number }}部</h2>
+{% for movie in Movies %}
+	<div><li><a href="{{ movie.website }}">{{ movie.name }}</a>  {{ movie.year }}  {{ movie.point }}  {{ movie.director }}  {{ movie.count_point }} </li></div>
+{% endfor %}
+</body>
+</html>

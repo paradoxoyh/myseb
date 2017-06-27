@@ -1,0 +1,16 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Search</title>
+</head>
+<body>
+	<div style="text-align: center;">
+	<h1>please input the search key words</h1>
+	<form action="{% url 'show:search' %}" method="post">
+		{% csrf_token %}
+    	<p><input type="text" name="q"></p>
+    	<p><input type="submit" value="Search"></p>
+	</form>
+	</div>
+</body>
+</html>

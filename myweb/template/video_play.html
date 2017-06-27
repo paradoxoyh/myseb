@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>视频播放</title>
+</head>
+<body>
+	<div style="text-align: center;">
+	<!--不能传入参数，功能待完善-->
+	{% load static %}
+		<video src="{% static "/2.mp4" %}" width="800" height="450" controls="controls">
+		</video>
+	</div>
+</body>
+</html>

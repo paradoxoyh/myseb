@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta charset="utf-8">
+	<title>豆瓣电影高分列表</title>
+</head>
+<body>
+<h2>豆瓣高分电影榜单-top 500</h2>
+<form action="{% url 'search' %}" method="get">
+	<p><input type="text" name="year"></p>
+	<p><input type="submit" value="搜索指定年份电影"></p>
+</form>
+{% for movie in Movies %}
+	<div><li><a href="{{ movie.website }}">{{ movie.name }}</a>  {{ movie.year }}  {{ movie.point }}  {{ movie.director }}  {{ movie.count_point }} </li></div>
+{% endfor %}
+</body>
+</html>
